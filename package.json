@@ -1,0 +1,19 @@
+{
+  "name": "navigation-telecom",
+  "dependencies": {
+    "parsel": "^0.3.0",
+    "three": "^0.162.0",
+    "three-pathfinding": "^1.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "vite": "^5.1.6",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "deploy": "vite build --mode github && gh-pages -d dist -b gh-pages"
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Telecom Indoor Navigator</title>
+  <script type="module" crossorigin src="/assets/index-CPXcubjX.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-xYjWpAT-.css">
+</head>
+<body>
+  <div id="sceneRoot" aria-label="3D indoor navigation scene"></div>
+
+  <main class="app-panel" id="appPanel" aria-label="Navigation controls" data-collapsed="false">
+    <div class="brand-row">
+      <div>
+        <p class="eyebrow">Telecom Paris</p>
+        <h1>Indoor Navigator</h1>
+      </div>
+      <div class="panel-actions">
+        <div class="status-pill" aria-live="polite">
+          <span class="status-dot" id="statusDot" data-tone="loading"></span>
+          <span id="statusText">Loading</span>
+        </div>
+        <button class="panel-toggle" id="panelToggle" type="button" aria-label="Collapse navigation panel" aria-expanded="true"></button>
+      </div>
+    </div>
+
+    <section class="field-grid" aria-label="Route search">
+      <div class="field">
+        <label for="startInput">From</label>
+        <div class="search-field">
+          <input class="control" id="startInput" autocomplete="off" placeholder="Search start point" role="combobox" aria-expanded="false" aria-controls="startResults" aria-autocomplete="list">
+          <button class="clear-input-button" id="clearStartButton" type="button" aria-label="Clear start" title="Clear start">X</button>
+          <div class="search-results" id="startResults" role="listbox" hidden></div>
+        </div>
+      </div>
+      <div class="field">
+        <label for="destinationInput">To</label>
+        <div class="search-field">
+          <input class="control" id="destinationInput" autocomplete="off" placeholder="Search room, service, entrance" role="combobox" aria-expanded="false" aria-controls="destinationResults" aria-autocomplete="list">
+          <button class="clear-input-button" id="clearDestinationButton" type="button" aria-label="Clear destination" title="Clear destination">X</button>
+          <div class="search-results" id="destinationResults" role="listbox" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="button-row">
+      <button class="primary-button" id="routeButton" type="button">Route</button>
+      <button class="icon-button" id="resetViewButton" type="button" title="Reset view" aria-label="Reset view">R</button>
+      <button class="icon-button" id="clearRouteButton" type="button" title="Clear route" aria-label="Clear route">X</button>
+    </div>
+
+    <section class="route-metrics" aria-label="Route summary">
+      <div class="metric">
+        <span id="distanceValue">--</span>
+        <small>Distance</small>
+      </div>
+      <div class="metric">
+        <span id="floorValue">--</span>
+        <small>Floors</small>
+      </div>
+      <div class="metric">
+        <span id="waypointValue">--</span>
+        <small>Turns</small>
+      </div>
+    </section>
+
+    <section aria-label="Route steps">
+      <p class="section-title">Steps</p>
+      <ol class="route-steps" id="routeSteps">
+        <li>No route selected</li>
+      </ol>
+    </section>
+
+    <section aria-label="Route feedback">
+      <div class="feedback-row" id="feedbackRow"></div>
+      <p class="feedback-count" id="feedbackCount">0 local feedback records</p>
+    </section>
+  </main>
+
+  <nav class="floor-switcher" aria-label="Floor visibility">
+    <button class="floor-button" type="button" data-floor="auto" aria-pressed="true">Auto</button>
+    <button class="floor-button" type="button" data-floor="1" aria-pressed="false">1</button>
+    <button class="floor-button" type="button" data-floor="2" aria-pressed="false">2</button>
+    <button class="floor-button" type="button" data-floor="3" aria-pressed="false">3</button>
+    <button class="floor-button" type="button" data-floor="4" aria-pressed="false">4</button>
+    <button class="floor-button" type="button" data-floor="5" aria-pressed="false">5</button>
+  </nav>
+
+</body>
+</html>
