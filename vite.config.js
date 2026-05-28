@@ -2,7 +2,7 @@ import { cpSync, existsSync } from 'node:fs';
 import { defineConfig } from 'vite';
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'github' ? '/navigation_tp/' : '/',
+  base: mode === 'github' ? '/nav_tp/' : '/',
   plugins: [
     {
       name: 'copy-glb-assets',
